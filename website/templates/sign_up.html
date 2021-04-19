@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+<style type="text/css">
+    .card {
+        margin: 5% auto;
+        width: 40%;
+        float: none;
+        margin-bottom: 10px;
+        border-radius: 10%;
+        padding: 1%;
+    }
+</style>
+{% endblock %}
+
+{% block title %}Sign-Up{% endblock %}
+
+{% block banner %}
+
+<div class="card shadow p-3 mb-5 bg-white rounded">
+    <div class="card-body">
+        <h5 class="card-title text-center">Sign Up</h5>
+        <form method="POST">
+            <div class="form-group">
+                <input type="email" class="form-control form-control-sm" id="email" name="email" placeholder="Email address"
+                    aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control form-control-sm" placeholder="First name" name="first_name">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control form-control-sm" placeholder="Last name" name="last_name">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <select id="gender" class="form-control form-control-sm" name="gender">
+                        <option selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <input type="text" class="form-control form-control-sm" id="age" name="age" placeholder="Age">
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control form-control-sm" id="profession" name="profession" placeholder="Profession">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col">
+                        <input type="password" name="password" class="form-control form-control-sm" placeholder="Password">
+                    </div>
+                    <div class="col">
+                        <input type="password" name="confirm_password" class="form-control form-control-sm"
+                            placeholder="Confirm Password">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm w-100 mt-3">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
